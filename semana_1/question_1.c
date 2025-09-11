@@ -4,8 +4,7 @@
 
 
 int main(){
-    int m = 0;
-    int n = 0;
+    int m, n;
     printf("Escreva o valor de M: ");
     scanf("%d", &m);
     printf("\nEscreva o valor de N: ");
