@@ -1,18 +1,17 @@
-// Escreva um programa que leia o valor de um ano e verifique se ele é ou não bissexto.  
-// Um ano é bissexto se ele for divisível por quatrocentos ou 
-// se se ele for divisível por  4 mas não for divisível por 100. 
-
+// Escreva um programa que leia o valor de uma temperatura em Celsius e calcule o seu   valor correspondente em Fahrenheit e em Kelvin.
 #include <stdio.h>
 
 int main(){
 
-    int ano = 0;
-    printf("Insira algum ano: ");
-    scanf("%d", &ano);
-    if ((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0)){
-        printf("%d e bissexto. \n", ano);
-    }
-    else{
-        printf("%d nao e bissexto. \n", ano);
-    }
+    float celsius, fahrenheit, kelvin;
+
+    printf("Informe a temperatura em graus celsius: ");
+    scanf("%f", &celsius);
+
+    fahrenheit = (celsius * 1.8) + 32;
+    kelvin = celsius + 273.15;
+
+    printf("A temperatura em celsius e: %.1fC\nA temperatura em fahrenheit e: %.1fF\nA temperatura me kelvin e: %.2fK", celsius, fahrenheit, kelvin);
+    
+    return 0;
 }

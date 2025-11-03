@@ -1,35 +1,25 @@
-// Escreva um programa que leia quatro números reais e verifique se eles formam, 
-// na  ordem em que foram digitados, uma progressão aritmética, 
-//uma progressão  geométrica, os dois tipos de progressão ou nenhum tipo de progressão
-
+// Escreva um programa que leia os valores de dois ângulos internos de um triângulo e 
+// calcule o valor do terceiro ângulo.
 #include <stdio.h>
 
 int main(){
 
-    float numero_1,numero_2, numero_3, numero_4;
-    int true_pa = 0, true_pg = 0;
+    int angulo1, angulo2,angulo3;
 
-    printf("Escreva quatro numeros reais em sequencia: ");
-    scanf("%f %f %f %f", &numero_1, &numero_2, &numero_3, &numero_4);
+    printf("Informe o primeiro angulo do triangulo: ");
+    scanf("%d", &angulo1);
+    printf("Informe o segundo angulo do triangulo: ");
+    scanf("%d", &angulo2);
 
-    if((numero_2 - numero_1 == numero_3 - numero_2) && (numero_3 - numero_2 == numero_4 - numero_3)){
-        true_pa = 1;
-    }
-    if((numero_2 / numero_1 == numero_3 / numero_2) && (numero_3 / numero_2 == numero_4 / numero_3)){
-        true_pg = 1;
-    }
+    angulo3 = 180 - (angulo1 + angulo2);
 
-    if (true_pa == 1 && true_pg == 1){
-        printf("A sequencia de numeros e tanto uma PA quanto uma PG. \n");
-    }
-    else if(true_pa == 1 && true_pg == 0){
-        printf("A sequencia de numeros e apenas uma PA. \n");
-    }
-    else if(true_pa == 0 && true_pg == 1){
-        printf("A sequencia de numeros e apenas uma PG. \n ");
+    if (angulo3 <= 0){
+
+        printf("Valor invalido!");
     }
     else{
-        printf("A sequencia de numeros nao e nem uma PA nem uma PG. \n");
+        printf("O angulo 3 vale: %d", angulo3);
     }
 
+    return 0;
 }

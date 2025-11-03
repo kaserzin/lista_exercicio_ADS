@@ -1,27 +1,19 @@
-//  Escreva um programa que leia a idade de uma pessoa e verifique se ela é criança (0- 12 anos), 
-//  adolescente (13-17 anos), adulta (18-59) ou idosa (acima de 60 anos).
-
+// Escreva um programa que leia o valor da base e da altura de um triângulo e  calcule a  sua área
 #include <stdio.h>
 
 int main(){
 
-    int idade = 0;
-    printf("Informe a idade: ");
-    scanf("%d", &idade);
+    int base, altura;
+    float area;
 
-    if(idade >= 60){
-        printf("A pessoa e idosa. \n");
-    }
-    else if(idade <= 59 && idade >= 18){
-        printf("A pessoa e adulta. \n");
-    }
-    else if(idade <= 17 && idade >= 13){
-        printf("A pessoa e adolescente. \n");
-    }
-    else if(idade <= 12 && idade >= 0){
-        printf("A pessoa e crianca. \n");
-    }
-    else{
-        printf("Idade invalida. ");
-    }
+    printf("Informe a base do triangulo em cm: ");
+    scanf("%dcm", &base);
+    printf("Informe a altura do triangulo em cm: ");
+    scanf("%dcm", &altura);
+
+    area = (base * altura) / 2;
+
+    printf("A base informada foi: %dcm\nA altura informada foi: %dcm\nA area do triangulo e: %.1fcm2", base,altura, area);
+
+    return 0;
 }

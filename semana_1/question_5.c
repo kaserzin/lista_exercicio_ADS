@@ -1,31 +1,18 @@
-//  Escreva um programa em que leia um número inteiro entre 1000 e 9999 e 
-// verifique  se o número lido é ou não um palíndromo.
 
+// Escreva um programa que leia um valor em polegadas e o converta para centímetros, 
+// considerando que uma polegada equivale a 2.54 cm.
 #include <stdio.h>
 
 int main(){
 
-    int numero = 0;
+    float polegadas, centimetros;
 
-    printf("Informe um valor entre 1000 e 9999: ");
-    scanf("%d", &numero);
+    printf("Informe um valor em polegadas: ");
+    scanf("%f", &polegadas);
+    
+    centimetros = polegadas * 2.54;
 
-    if (numero <= 999 || numero >= 10000){
-        printf("Valor invalido. \n");
-    }
-    else{
-        int milhar = numero /1000;
-        int centena = (numero / 100) % 10;
-        int dezena = (numero / 10) % 10;
-        int unidade = numero % 10;
+    printf("%.1f polegas em centimentro fica: %.1f", polegadas, centimetros);
 
-        if (milhar == unidade && centena == dezena){
-            printf("O numero %d e palindromo. \n", numero);
-        }
-        else{
-            printf("O numero nao e um palindromo. \n");
-        }
-
-    }
-
+    return 0;
 }
